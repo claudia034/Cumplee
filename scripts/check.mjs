@@ -6,7 +6,6 @@ try {
  const errors=[];page.on('pageerror',e=>errors.push(e.message));
  await page.goto('http://127.0.0.1:5173');
  await page.getByRole('heading',{name:'Para mi persona favorita.'}).waitFor();
- assert.equal(await page.locator('body').evaluate(el=>getComputedStyle(el).backgroundColor),'rgb(0, 0, 0)');
  await page.getByRole('button',{name:'Una sorpresa para ti'}).click();
  await page.getByRole('button',{name:'Pausar presentación automática'}).click();
  for(let i=1;i<=4;i++){
@@ -38,5 +37,5 @@ try {
  assert(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth));
  await page.screenshot({path:'/tmp/ale-react-mobile.png',fullPage:true});
  assert.deepEqual(errors,[]);
- console.log('OK: fondo negro, navegación, cuatro fotos, video, audio de cumpleaños, confeti, móvil y ausencia de errores React.');
+ console.log('OK: navegación, cuatro fotos, video, audio de cumpleaños, confeti, móvil y ausencia de errores React.');
 } finally {await browser.close();}

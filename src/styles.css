@@ -76,3 +76,86 @@ h2{font-size:clamp(34px,4.6vw,65px)}
   .detail{margin:10px 0}
   .ticket-foot{font-size:13px}
 }
+
+/* Un álbum de aventuras bajo un cielo de fiesta. */
+body{background:#102c30}
+.sky{background:radial-gradient(ellipse at 85% 12%,#af745342,transparent 48%),radial-gradient(ellipse at 8% 85%,#338b8270,transparent 55%),linear-gradient(135deg,#122f35,#183b3d 55%,#273635)}
+.grain{display:block;opacity:.045}
+.sky-star{position:absolute;color:#f8d49b;opacity:.55;font-size:26px;animation:twinkle 5s ease-in-out infinite alternate}
+.ambient-orbit{position:absolute;width:75vw;height:75vw;border:1px solid #f8d49b18;border-radius:50%;transform:rotate(-25deg) scaleY(.6)}
+.orbit-one{top:-40vw;left:-12vw}.orbit-two{right:-30vw;bottom:-30vw}
+.party-balloons{position:absolute;width:240px;height:340px;opacity:.3;filter:saturate(.75);animation:float 9s ease-in-out infinite}
+.balloons-right{right:-70px;top:10%}.balloons-left{left:-100px;bottom:-55px;transform:rotate(20deg);animation-delay:-4s}
+.invitation-header{width:100%;max-width:1240px;padding:22px 38px;color:#efdab7;font-size:10px;letter-spacing:2.5px;flex:none}
+.invitation-header .compass{color:#f1b888}
+.stage{width:calc(100% - 64px);max-width:1160px;flex:1;margin:0 auto;border:1px solid #f0d3a635;border-radius:24px;background:linear-gradient(120deg,#11292fe8,#23484a99);box-shadow:0 24px 80px #061d2540,inset 0 1px #fff2;isolation:isolate}
+.stage::before{content:'';position:absolute;inset:10px;border:1px solid #f0d3a612;border-radius:16px;pointer-events:none;z-index:-1}
+.stage::after{content:'✦';position:absolute;bottom:18px;left:50%;color:#e8bd8280;font-size:18px;pointer-events:none}
+.slide{padding:42px 56px;gap:56px}
+.stage .slide>div:first-child{position:relative}
+.stage .slide>div:first-child::after{content:'';display:block;width:70px;height:2px;margin-top:25px;background:linear-gradient(90deg,#eda276,transparent)}
+.stage .slide::before{content:attr(aria-label);position:absolute;top:22px;left:56px;text-transform:uppercase;color:#e6bd8e;font-size:9px;letter-spacing:2.7px;max-width:calc(100% - 100px)}
+h1,h2{text-shadow:0 4px 30px #0002}
+em{color:#f4b88b}
+.copy{color:#d1ddda;max-width:390px}
+.primary{background:linear-gradient(110deg,#fac69a,#eaa177);box-shadow:0 6px 24px #f1ac7626;border:1px solid #ffdcb080;font-weight:600}
+.primary:hover{background:#ffd2a7;box-shadow:0 8px 30px #f1ac7640}
+.art::before{content:'';position:absolute;width:90%;aspect-ratio:1;border-radius:50%;background:radial-gradient(circle,#d8c59022,transparent 68%);border:1px dashed #e8c79b30;z-index:-1}
+.house{filter:drop-shadow(0 18px 26px #0003);height:min(65svh,570px)}
+.photo{box-shadow:8px 10px 0 #c695652b,0 24px 45px #001b2855;background:#fff4e0;border-radius:3px}
+.photo::before{background:repeating-linear-gradient(45deg,#dbb679a8,#dbb679a8 3px,#efd1a4a8 3px,#efd1a4a8 6px)}
+.ticket{background:radial-gradient(circle at top right,#efd1a066,transparent 60%),#fff8e9;box-shadow:10px 12px 0 #cfa47522,0 25px 55px #001b2855;border-radius:5px 24px 5px 24px}
+.ticket::before{border-color:#be986e70;border-radius:2px 16px 2px 16px}
+.ticket .star{color:#ba754b;font-size:34px}
+.ticket-label{color:#6a775e}
+.ticket .line{border-color:#bfaa8570}
+.nav{width:fit-content;max-width:calc(100% - 24px);margin:14px auto;padding:8px 18px;border:1px solid #efd2a52b;border-radius:50px;background:#102b30b3;box-shadow:0 8px 25px #071d2320}
+.nav>button{background:#e8d7b90c;border-color:#e7ceaa55}
+.nav>button:hover:not(:disabled){background:#e8d7b925}
+.counter{color:#dbd4be}
+@keyframes twinkle{to{opacity:.2;transform:scale(.8)}}
+@media(min-width:701px) and (max-height:750px){
+  .invitation-header{padding-block:14px}
+  .slide{padding:38px 40px;gap:35px}
+  .stage .slide::before{left:40px;top:16px}
+  .stage .slide>div:first-child::after{margin-top:15px}
+  .house{height:58svh}
+  .nav{margin:10px auto}
+}
+@media(max-width:700px){
+  .invitation-header{padding:16px 22px;font-size:8px;letter-spacing:1.8px}
+  .invitation-header .mark{gap:6px}.invitation-header .compass{font-size:22px}
+  .date-top{font-size:8px;letter-spacing:1px}
+  .stage{width:calc(100% - 24px);border-radius:18px}
+  .stage::before{inset:6px;border-radius:13px}
+  .stage::after{display:none}
+  .slide{padding:40px 23px 24px;gap:20px}
+  .stage .slide::before{top:16px;left:23px;font-size:7px;letter-spacing:1.7px;max-width:calc(100% - 46px)}
+  .stage .slide>div:first-child::after{display:none}
+  h1{font-size:clamp(36px,10vw,48px)}
+  h2{font-size:clamp(28px,7.5vw,36px)}
+  .copy{font-size:12px;line-height:1.65}
+  .house{height:clamp(165px,28svh,275px)}
+  .photo{max-width:270px}
+  .photo img,.photo video{height:clamp(145px,26svh,260px)}
+  .photo.landscape img{height:clamp(135px,23svh,220px)}
+  .ticket{padding:16px 20px;max-width:290px}
+  .ticket .star{font-size:22px;margin-bottom:4px}
+  .ticket h3{font-size:28px;margin-top:8px}
+  .ticket .line{margin:9px 0}.detail{margin:9px 0}
+  .ticket-label{font-size:7px;letter-spacing:1.8px}
+  .ticket-foot{font-size:12px}
+  .nav{gap:4px;padding:5px 8px;margin:10px auto max(10px,env(safe-area-inset-bottom))}
+  .nav>button{width:40px;height:44px}
+  .dots button,.dots button.current{width:20px}
+  .dots button::after{left:6px}.dots button.current::after{left:2px}
+  .counter{font-size:9px;min-width:32px}
+  .party-balloons{width:150px;opacity:.2}
+}
+@media(max-width:700px) and (max-height:740px){
+  .invitation-header{padding-block:10px}
+  .slide{padding-top:34px;padding-bottom:18px;gap:16px}
+  .ticket .star{display:none}
+  .ticket{padding-block:14px}
+  .primary{margin-top:10px}
+}

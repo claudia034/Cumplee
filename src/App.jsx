@@ -73,7 +73,13 @@ export default function App() {
   };
   return <>
 
-<div className="sky" aria-hidden="true"><div className="cloud one"></div><div className="cloud two"></div><div className="cloud three"></div></div><div className="grain"></div>
+<div className="sky" aria-hidden="true">
+  <div className="ambient-orbit orbit-one" /><div className="ambient-orbit orbit-two" />
+  {Array.from({length:24},(_,i)=><span className="sky-star" key={i} style={{left:`${(i*37+3)%100}%`,top:`${(i*23+7)%100}%`,animationDelay:`${i%5}s`}}>{i%4===0?'✧':'·'}</span>)}
+  <svg className="party-balloons balloons-right" viewBox="90 0 270 380"><Balloons /></svg>
+  <svg className="party-balloons balloons-left" viewBox="90 0 270 380"><Balloons /></svg>
+</div><div className="grain" aria-hidden="true" />
+<header className="invitation-header"><span className="mark"><span className="compass" aria-hidden="true">✧</span> UNA AVENTURA MÁS</span><span className="date-top">ALE · 03 OCT</span></header>
 
 <main className="stage" aria-label="Invitación de cumpleaños de Ale">
 <section className={`slide intro ${current === 0 ? "active" : ""}`} aria-hidden={current !== 0} inert={current !== 0} aria-label="Bienvenida">
