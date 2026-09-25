@@ -79,7 +79,6 @@ export default function App() {
   <svg className="party-balloons balloons-right" viewBox="90 0 270 380"><Balloons /></svg>
   <svg className="party-balloons balloons-left" viewBox="90 0 270 380"><Balloons /></svg>
 </div><div className="grain" aria-hidden="true" />
-<header className="invitation-header"><span className="mark"><span className="compass" aria-hidden="true">✧</span> UNA AVENTURA MÁS</span><span className="date-top">ALE · 03 OCT</span></header>
 
 <main className="stage" aria-label="Invitación de cumpleaños de Ale">
 <section className={`slide intro ${current === 0 ? "active" : ""}`} aria-hidden={current !== 0} inert={current !== 0} aria-label="Bienvenida">
